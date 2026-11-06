@@ -1,0 +1,44 @@
+sources:
+  urls:
+    - https://groww.in/mutual-funds/amc/hdfc-mutual-funds
+    - https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth
+    - https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth
+    - https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth
+    - https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth
+
+chunking:
+  strategy: structure
+  size: 800
+  overlap: 120
+
+embedding:
+  model: sentence-transformers/all-MiniLM-L6-v2
+
+chroma:
+  persist_dir: data/chroma
+  collection: groww_hdfc_mf
+
+retrieval:
+  top_k: 4
+  min_score: 0.25
+
+llm:
+  provider: groq
+
+paths:
+  raw: data/raw
+  cleaned: data/cleaned
+  chunks: data/chunks
+  embeddings: data/embeddings
+  traces: data/traces
+
+ui:
+  welcome: "Ask factual questions about the listed HDFC schemes on Groww."
+  disclaimer: "Facts-only. No investment advice."
+  examples:
+    - "What is the expense ratio of HDFC Large Cap Fund Direct Growth?"
+    - "What is the lock-in for HDFC ELSS Tax Saver?"
+    - "What is the minimum SIP for HDFC Mid Cap Fund Direct Growth?"
+
+policy:
+  educational_link: "https://groww.in/mutual-funds/amc/hdfc-mutual-funds"

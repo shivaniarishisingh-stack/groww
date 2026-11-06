@@ -1,0 +1,31 @@
+# Secrets and local environment files
+.env
+.env.txt
+.env.*
+!.env.example
+
+# Streamlit: keep the shared theme config, never the secrets
+.streamlit/*
+!.streamlit/config.toml
+
+# Virtual environments
+venv/
+.venv/
+
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Runtime diagnostics (recreated on demand)
+data/traces/
+*.log
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# The prebuilt Chroma index is intentionally committed so Streamlit Cloud
+# can answer questions without re-running ingestion.

@@ -1,0 +1,26 @@
+{
+  "total_chunks": 201,
+  "per_url": {
+    "https://groww.in/mutual-funds/amc/hdfc-mutual-funds": 53,
+    "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth": 37,
+    "https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth": 38,
+    "https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth": 35,
+    "https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth": 38
+  },
+  "per_section": {
+    "overview": 18,
+    "aum": 82,
+    "expense_ratio": 32,
+    "exit_load": 52,
+    "statements": 8,
+    "min_sip": 4,
+    "benchmark": 4,
+    "lock_in": 1
+  },
+  "min_length": 18,
+  "max_length": 815,
+  "avg_length": 549.9,
+  "strategy": "structure",
+  "size": 800,
+  "overlap": 120
+}
