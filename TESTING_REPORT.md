@@ -3,7 +3,7 @@
 **Review date:** 06 November 2026  
 **Project:** Groww HDFC Mutual Fund FAQ Assistant (updated ZIP)  
 **Environment:** Windows, Python 3.12.10, Streamlit 1.66.1, ChromaDB 1.5.9, Groq SDK 1.7.0  
-**Final test result:** `58 passed`
+**Final test result:** `67 passed`
 
 ---
 
@@ -93,7 +93,7 @@ streamlit run src/app.py --server.port 8502
 Verification results:
 
 - Full ingest: all 5 pages HTTP 200, 201 chunks, 201 × 384 vectors, Chroma index built.
-- Test suite: `58 passed`.
+- Test suite: `67 passed`.
 - Server health: `ok`.
 - Page response: HTTP 200.
 - Factual, advice, returns, PII, and unsupported-question paths all behaved as documented.
@@ -102,6 +102,7 @@ Verification results:
 
 ## 6. Notes for reviewers
 
+- Deployment update (07 November 2026): the suite now has 67 tests. The added tests cover `GROQ_API_KEY`/`LLM_MODEL` resolution from the environment, `.env`, and `st.secrets`, plus UI rendering of the source list, sample Q&A, and disclaimer.
 - The packager intentionally excluded `.env`, `.env.txt`, `.venv`, caches, and `data/traces/`.
 - The package includes the built corpus and ChromaDB index under `data/`, so ingestion can be skipped.
 - If the index does not open on another machine, run `python -m src.ingest` to rebuild it. This requires internet access to Groww.

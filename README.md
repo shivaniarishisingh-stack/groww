@@ -178,7 +178,7 @@ cd "$HOME\Desktop\mutual_fund_faq_assistant_final"
 python -m pytest -q
 ```
 
-Expected result for this package: **58 passed**. The suite covers policy classification, PII trace safety, refusal paths that never call Chroma or Groq, citation and length post-checks, missing-key errors, empty/missing collections, the not-found and invented-lock-in post-checks, and the Streamlit render/refusal paths. See `TESTING_REPORT.md` for the full review report.
+Expected result for this package: **67 passed**. The suite covers policy classification, PII trace safety, refusal paths that never call Chroma or Groq, citation and length post-checks, missing-key errors, credential resolution from environment/`.env`/`st.secrets`, empty/missing collections, the not-found and invented-lock-in post-checks, and the Streamlit render/refusal plus sources/sample-Q&A/disclaimer paths. See `TESTING_REPORT.md` for the full review report.
 
 ## Build or refresh the corpus
 
